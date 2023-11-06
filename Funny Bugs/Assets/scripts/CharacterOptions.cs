@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterOptions : MonoBehaviour
 {
     [SerializeField] GameObject characterSelectPrefab;
     [SerializeField] ScriptableCharacter[] characters;
+    [SerializeField] SceneLoadOverlay sceneLoadOverlay;
     int playerOneLocation = 0;
     int playerTwoLocation = 0;
     int playerThreeLocation = 0;
@@ -65,6 +67,13 @@ public class CharacterOptions : MonoBehaviour
             characterSelects[playerThreeLocation].SetPlayerThree(false);
             playerThreeLocation = (playerThreeLocation + 1) % characterSelects.Length;
             characterSelects[playerThreeLocation].SetPlayerThree(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            GameManager.Instance.SetPlayerOne(characters[playerOneLocation]);
+            GameManager.Instance.SetPlayerTwo(characters[playerTwoLocation]);
+            GameManager.Instance.SetPlayerThree(characters[playerThreeLocation]);
+            StartCoroutine(sceneLoadOverlay.LoadOut());
         }
     }
 }

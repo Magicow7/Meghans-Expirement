@@ -13,5 +13,4 @@ public abstract class CharacterSpecifics : MonoBehaviour
         yield return new WaitForSeconds(cooldownTime);
         toSet.value = true;
     }
-
 }

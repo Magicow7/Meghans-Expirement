@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec126926c643790439f61f934c299354, type: 3}
   m_Name: Tarantula
   m_EditorClassIdentifier: 
-  characterImage: {fileID: 21300000, guid: 64a4020d5c315374489888d0475b052c, type: 3}
+  characterImage: {fileID: 21300000, guid: 548f829af4a941d49891c56aed62bf30, type: 3}
   characterName: Taratula

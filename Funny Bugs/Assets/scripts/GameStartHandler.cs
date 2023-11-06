@@ -11,9 +11,7 @@ public class GameStartHandler : MonoBehaviour
     void Update()
     {
         if (Input.anyKey)
-        {
             StartCoroutine(FadeOut());
-        }
     }
 
     IEnumerator FadeOut() {
